@@ -32,6 +32,8 @@ urlpatterns = [
     path("rest-auth/registration/", include("rest_auth.registration.urls")),
     path("home/", include("home.urls")),
     path("api/v1/", include("fgnbfhvc.api.v1.urls")),
+    path("api/v1/", include("dgfhdf.api.v1.urls")),
+    path("api/v1/", include("fgdh.api.v1.urls")),
 ]
 
 admin.site.site_header = "web 1 may"

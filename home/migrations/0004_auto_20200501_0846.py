@@ -9,22 +9,31 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0003_auto_20200501_0816'),
+        ("home", "0003_auto_20200501_0816"),
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='homepage',
-            name='body',
+        migrations.RemoveField(model_name="homepage", name="body",),
+        migrations.AddField(
+            model_name="homepage",
+            name="hghgh",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="homepage_hghgh",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='hghgh',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='homepage_hghgh', to=settings.AUTH_USER_MODEL),
-        ),
-        migrations.AddField(
-            model_name='homepage',
-            name='jhj',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='homepage_jhj', to='home.CustomText'),
+            model_name="homepage",
+            name="jhj",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="homepage_jhj",
+                to="home.CustomText",
+            ),
         ),
     ]
