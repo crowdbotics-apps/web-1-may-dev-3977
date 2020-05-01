@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "fgdh",
     "homecvgfsrfgc",
     "srfwe",
+    "nbhjgbjh",
 ]
 LOCAL_APPS = [
     "home",
