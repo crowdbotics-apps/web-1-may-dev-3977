@@ -9,9 +9,9 @@ from django.db import models
 class CustomText(models.Model):
     gfg = models.ForeignKey(
         "home.CustomText",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="customtext_gfg",
     )
     hghg = models.ManyToManyField(
@@ -33,16 +33,16 @@ class CustomText(models.Model):
 class HomePage(models.Model):
     hghgh = models.OneToOneField(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="homepage_hghgh",
     )
     jhj = models.ForeignKey(
         "home.CustomText",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="homepage_jhj",
     )
 

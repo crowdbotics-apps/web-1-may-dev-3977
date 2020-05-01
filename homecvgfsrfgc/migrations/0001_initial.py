@@ -9,15 +9,30 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('dgfhdf', '0001_initial'),
+        ("dgfhdf", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Ffghu',
+            name="Ffghu",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('dgfwrs', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='ffghu_dgfwrs', to='dgfhdf.Ffgjy')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "dgfwrs",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="ffghu_dgfwrs",
+                        to="dgfhdf.Ffgjy",
+                    ),
+                ),
             ],
         ),
     ]
